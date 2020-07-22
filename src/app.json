@@ -31,6 +31,9 @@
     "van-cell": "/vant-weapp/dist/cell/index",
     "van-cell-group": "/vant-weapp/dist/cell-group/index",
     "van-swipe-cell": "/vant-weapp/dist/swipe-cell/index",
-    "van-image": "/vant-weapp/dist/image/index"
+    "van-image": "/vant-weapp/dist/image/index",
+    "van-steps": "/vant-weapp/dist/steps/index",
+    "van-skeleton": "/vant-weapp/dist/skeleton/index",
+    "van-loading": "/vant-weapp/dist/loading/index"
   }
 }

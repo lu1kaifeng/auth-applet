@@ -1,8 +1,8 @@
 <template>
 
   <div style="width: 100%; height:100%">
-    <div style="position: absolute;top: 30%;left:50%;transform: translate(-50%,-50%);background: linear-gradient(to right, #4bb0ff, #6149f6);border-radius: 100%;padding: 2em ">
-        <van-icon @click="onScan" name="photograph" style="color: white" size="5em" />
+    <div @click="onScan" style="position: absolute;top: 30%;left:50%;transform: translate(-50%,-50%);background: linear-gradient(to right, #4bb0ff, #6149f6);border-radius: 100%;padding: 2em ">
+        <van-icon  name="photograph" style="color: white" size="5em" />
     </div>
 
   </div>
@@ -29,17 +29,14 @@ export default {
 
   methods: {
     async onScan() {
-      if (false) {
+      if (wx.getStorageSync('token') !== '') {
         const id = (await QRScan()).result;
         this.$router.push({
           path: '/pages/viewer',
           query: { id },
         });
       } else {
-        this.$router.push({
-          path: '/pages/viewer',
-          query: { id: 4 },
-        });
+        this.$router.push('/pages/login');
       }
     },
     bindViewTap() {
